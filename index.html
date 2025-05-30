@@ -32,6 +32,7 @@
     nav a:hover {
       background: #303f9f;
     }
+    
     section {
       padding: 30px 20px;
       max-width: 1000px;
@@ -43,6 +44,17 @@
       gap: 16px;
       padding-bottom: 10px;
         }
+    .button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: #0056b3;
+    }
     .property {
       flex: 0 0 auto;
       background: white;
@@ -171,7 +183,7 @@
     <h2>Your Coordinates</h2>
     <h6>Dear customer for us to get your precise location to render our service well please copy the codinate below 👇 and provide it before delivery so we will get your position.Thanks.</h6>
     <div id="coordinates">Loading...</div>
-    <button onclick="copyCoords()">Copy Coordinates</button>
+    <button classs="button" onclick="copyCoords()">Copy Coordinates</button>
     </div>
   </section>
   <div id="location-box">
