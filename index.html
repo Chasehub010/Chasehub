@@ -116,6 +116,30 @@
       box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
   </style>
+  <script>
+    let coords = '';
+
+    // Fetch coordinates using ipapi.co
+    fetch("https://ipapi.co/json/")
+      .then(response => response.json())
+      .then(data => {
+        const lat = data.latitude;
+        const lon = data.longitude;
+        coords = `Latitude: ${lat}, Longitude: ${lon}`;
+        document.getElementById("coordinates").textContent = coords;
+      })
+      .catch(err => {
+        coords = "Unable to fetch coordinates.";
+        document.getElementById("coordinates").textContent = coords;
+      });
+
+    // Copy to clipboard
+    function copyCoords() {
+      navigator.clipboard.writeText(coords)
+        .then(() => alert("Coordinates copied!"))
+        .catch(err => alert("Copy failed: " + err));
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -142,6 +166,19 @@
       <p>Hello! everyone I'm Daniel... AKA chasecode a developer based in Anambra, Nigeria. I specialize in web development, blockchain solutions, gift card trading, and helping businesses manage their services and scale digitally and Globally.</p>
     </div>
   </section>
+  <section>
+    <div id="location-box">
+    <h2>Your Coordinates</h2>
+    <h6>Dear customer for us to get your precise location to render our service well please copy the codinate below 👇 and provide it before delivery so we will get your position.Thanks.</h6>
+    <div id="coordinates">Loading...</div>
+    <button onclick="copyCoords()">Copy Coordinates</button>
+    </div>
+  </section>
+  <div id="location-box">
+    <h3>Your Coordinates</h3>
+    <div id="coordinates">Loading...</div>
+    <button onclick="copyCoords()">Copy Coordinates</button>
+  </div>
 
   <section id="services">
     <h2>💼 Services</h2>
