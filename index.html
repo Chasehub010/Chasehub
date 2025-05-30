@@ -37,6 +37,40 @@
       max-width: 1000px;
       margin: auto;
     }
+        .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding-bottom: 10px;
+        }
+    .property {
+      flex: 0 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      max-width: 300px;
+      min-width: 280px;
+    }
+    .property img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+        .property-content {
+      padding: 10px;
+        }
+    .whatsapp-btnss {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    
+    
     .card {
       background: white;
       padding: 20px;
@@ -58,31 +92,10 @@
     .property-content {
       padding: 10px;
     }
-    .property img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px 8px 0 0;
-    }
-    .property {
-      flex: 0 0 auto;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      max-width: 300px;
-      min-width: 280px;
-    }
     
-    .whatsapp-btns {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 10px 16px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
     
+   
+   
     footer {
       text-align: center;
       padding: 20px;
@@ -134,14 +147,14 @@
     <h2>💼 Services</h2>
     <div id="house">
       <section id="houses">
-    <h2>🏠 Houses</h2>
+    <h2>🏠 Houses For Sales</h2>
     <div class="scroll-container">
       <div class="property">
         <img src="https://source.unsplash.com/300x200/?dublex,home" alt="House 1" />
         <div class="property-content">
           <h3>4-Bedroom Duplex</h3>
           <p>₦85,000,000</p>
-          <a class="whatsapp-btn" href="https://wa.me/2347013550569?text=Hi%20I'm%20interested%20in%20the%204-bedroom%20duplex%20for%20₦85M.">Contact on WhatsApp</a>
+          <a class="whatsapp-btnss" href="https://wa.me/2347013550569?text=Hi%20I'm%20interested%20in%20the%204-bedroom%20duplex%20for%20₦85M.">Contact on WhatsApp</a>
         </div>
       </div>
       <div class="property">
@@ -149,7 +162,7 @@
         <div class="property-content">
           <h3>Luxury Bungalow</h3>
           <p>₦60,000,000</p>
-          <a class="whatsapp-btns" href="https://wa.me/2347013550569?text=Hi%20I'm%20interested%20in%20the%20Luxury%20Bungalow%20for%20₦60M.">Contact on WhatsApp</a>
+          <a class="whatsapp-btnss" href="https://wa.me/2347013550569?text=Hi%20I'm%20interested%20in%20the%20Luxury%20Bungalow%20for%20₦60M.">Contact on WhatsApp</a>
         </div>
       </div>
     </div>
